@@ -7,9 +7,9 @@ import AppLayout from "@/Layouts/AppLayout.vue"
     <Head title="Статья" />
     <AppLayout>
         <div class="col-10 offset-1">
-            <img src="https://placehold.co/600x400" class="card-img-top" alt="https://placehold.co/600x400">
+<!--            <img src="https://placehold.co/600x400" class="card-img-top" alt="https://placehold.co/600x400">-->
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h2 class="card-title">Card title</h2>
                 <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 <span class="badge rounded-pill text-bg-dark m-2">tag1</span>
                 <span class="badge rounded-pill text-bg-dark m-2">tag2</span>

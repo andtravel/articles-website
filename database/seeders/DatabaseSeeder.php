@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         Article::factory(30)
             ->hasAttached(Tag::factory()->count(3))->create();
         Comment::factory()->count(10)->create();
-        State::factory()->count(10)->create();
+        State::factory()->count(30)->create();
         Tag::factory()->count(10)->create();
     }
 }

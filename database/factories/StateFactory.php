@@ -17,7 +17,7 @@ class StateFactory extends Factory
     public function definition(): array
     {
         return [
-            'article_id' => $this->faker->numberBetween(1, 30),
+            'article_id' => $this->faker->unique()->numberBetween(1, 30),
             'views' => $this->faker->numberBetween(50, 100),
             'likes' => $this->faker->numberBetween(0, 50),
         ];
