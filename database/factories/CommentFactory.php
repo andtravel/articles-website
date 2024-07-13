@@ -19,7 +19,7 @@ class CommentFactory extends Factory
         return [
             'subject' => $this->faker->sentence(),
             'body' => $this->faker->paragraphs(3, true),
-            'article_id' => $this->faker->numberBetween(1, 30),
+            'article_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

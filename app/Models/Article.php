@@ -37,7 +37,7 @@ class Article extends Model
     public function body(): Attribute
     {
         return Attribute::make(
-            get: fn (string $value) => request()->routeIs('home') ? Str::limit($value, 100) : $value
+            get: fn (string $value) => request()->routeIs('article') ? $value : Str::limit($value, 100)
         );
     }
 
@@ -51,5 +51,10 @@ class Article extends Model
     public function scopeLastLimit(Builder $query, int $number): void
     {
         $query->with(['tags', 'state'])->orderBy('created_at', 'desc')->limit($number);
+    }
+
+    public function scopeAllPaginate(Builder $query): void
+    {
+        $query->with(['tags', 'state'])->orderBy('created_at', 'desc');
     }
 }

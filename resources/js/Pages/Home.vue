@@ -32,7 +32,6 @@ defineProps({
                 </div>
             </div>
         </div>
-        <Pagination />
     </AppLayout>
 </template>
 
