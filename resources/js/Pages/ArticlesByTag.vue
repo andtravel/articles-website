@@ -1,27 +1,20 @@
 <script setup>
 import {Head, Link} from '@inertiajs/vue3'
-import AppLayout from "@/Layouts/AppLayout.vue"
-import Pagination from "@/Components/Pagination.vue"
+import AppLayout from "@/Layouts/AppLayout.vue";
 
 defineProps({
-        articles: Object,
-        tags: Object
-    });
+    articles: Object,
+    tag: Object
+})
+
 </script>
 
 <template>
-    <Head title="Каталог статей"/>
+    <Head title="Articles List by Tag" />
     <AppLayout>
-        <div class="d-flex justify-content-between">
-            <div class="col-4">
-                <span class="badge rounded-pill text-bg-dark m-2" v-for="tag in tags" :key="tag.label">
-                <Link :href="route('articles.tag', tag.id)">
-                    {{ tag.label }}
-                </Link>
-                </span>
-            </div>
-            <div class="col-8">
-                <div class="card mb-3" v-for="article in articles.data" :key="article.id">
+        <div class="d-flex justify-content-center align-items-center flex-wrap">
+            <div class="col-6" v-for="article in articles.data" :key="article.id">
+                <div class="card m-3">
                     <img src="https://placehold.co/600x400" class="card-img-top" alt="https://placehold.co/600x400">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -42,7 +35,6 @@ defineProps({
                 </div>
             </div>
         </div>
-        <Pagination :articles="articles" />
     </AppLayout>
 </template>
 

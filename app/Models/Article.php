@@ -57,4 +57,14 @@ class Article extends Model
     {
         $query->with(['tags', 'state'])->orderBy('created_at', 'desc');
     }
+
+    public function scopeFindBySlug(Builder $query, string $slug): void
+    {
+        $query->with(['comments','tags', 'state'])->where('slug', $slug);
+    }
+
+    public function scopeFindByTag(Builder $query): void
+    {
+        $query->with('tags', 'state')->orderBy('created_at', 'desc');
+    }
 }
