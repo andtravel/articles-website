@@ -15,7 +15,7 @@ defineProps({
         <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="col-6" v-for="article in articles.data" :key="article.id">
                 <div class="card m-3">
-                    <img src="https://placehold.co/600x400" class="card-img-top" alt="https://placehold.co/600x400">
+                    <img :src="article.image" class="card-img-top" :alt="article.image">
                     <div class="card-body">
                         <h5 class="card-title">
                             <Link :href="route('article', article.slug)">{{ article.title }}</Link>

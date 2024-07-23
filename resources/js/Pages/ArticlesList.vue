@@ -22,7 +22,7 @@ defineProps({
             </div>
             <div class="col-8">
                 <div class="card mb-3" v-for="article in articles.data" :key="article.id">
-                    <img src="https://placehold.co/600x400" class="card-img-top" alt="https://placehold.co/600x400">
+                    <img :src="article.image" class="card-img-top" alt="https://placehold.co/600x400">
                     <div class="card-body">
                         <h5 class="card-title">
                             <Link :href="route('article', article.slug)">{{ article.title }}</Link>
