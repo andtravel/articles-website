@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Каталог статей"/>
+    <Head title="Catalogue of articles"/>
     <AppLayout>
         <div class="d-flex justify-content-between">
             <div class="col-4">

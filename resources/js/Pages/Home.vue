@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Статейник" />
+    <Head title="Articles website" />
     <AppLayout>
         <div class="row row-cols-1 row-cols-md-3 g-4" >
             <div class="col" v-for="article in articles">

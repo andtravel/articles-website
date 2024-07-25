@@ -8,7 +8,6 @@ const props =defineProps({
 })
 
 const likes = ref(props.article.state.likes)
-
 const views = ref(props.article.state.views)
 
 const toggleLikes = ref(true)
