@@ -24,7 +24,7 @@ class ArticleFactory extends Factory
         return [
             'title' => $title,
             'slug' => $slug,
-            'image' => $this->faker->imageUrl(),
+            'image' => "https://placehold.co/600x400?text={$title}",
             'body' => $this->faker->paragraphs(3, true),
             'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'published_at' => Carbon::now(),
